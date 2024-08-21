@@ -5,6 +5,6 @@ import Todo from "./components/Todo";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <Todo />
+    <App />
   </React.StrictMode>
 );
