@@ -18,6 +18,7 @@ export default function Todo() {
           value={todo}
         />
         <button type="submit">Add</button>
+        <div>Succesfulll</div>
       </form>
       {todos.map((item) => (
         <Todoapplist key={item} item={item} />
