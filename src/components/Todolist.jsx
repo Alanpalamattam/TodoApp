@@ -1,7 +1,8 @@
 import Todoapplist from "./todoapplist";
+import styles from "./todolist.module.css";
 export default function Todolist({ todos }) {
   return (
-    <div>
+    <div className={styles.list}>
       {todos.map((item) => (
         <Todoapplist key={item} item={item} />
       ))}
