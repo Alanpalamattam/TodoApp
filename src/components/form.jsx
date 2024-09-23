@@ -19,7 +19,7 @@ export default function Form({ todos, setTodos }) {
           placeholder="Enter todo item"
         />
         <button className={styles.modernButton} type="submit">
-          Add
+          Add Todo
         </button>
       </div>
     </form>
