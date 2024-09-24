@@ -16,7 +16,7 @@ export default function Form({ todos, setTodos }) {
           onChange={(e) => setTodo(e.target.value)}
           type="text"
           value={todo}
-          placeholder="Enter todo item"
+          placeholder="Enter todo"
         />
         <button className={styles.modernButton} type="submit">
           Add Todo

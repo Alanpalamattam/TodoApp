@@ -1,4 +1,4 @@
-import Todoapplist from "./todoapplist";
+import Todoapplist from "./TodoItem";
 import styles from "./todolist.module.css";
 export default function Todolist({ todos }) {
   return (
