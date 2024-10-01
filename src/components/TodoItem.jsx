@@ -7,7 +7,7 @@ export default function Todoapplist({ item, todos, setTodos }) {
   return (
     <div clasname={styles.item}>
       <div className={styles.itemName}>
-        {item}
+        {item.name}
         <span>
           <button
             onClick={() => handleDelete(item)}
