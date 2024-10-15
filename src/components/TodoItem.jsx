@@ -9,12 +9,9 @@ export default function Todoapplist({ item, todos, setTodos }) {
       <div className={styles.itemName}>
         {item.name}
         <span>
-          <button
-            onClick={() => handleDelete(item)}
-            className={styles.deletebutton}
-          >
-            X
-          </button>
+        <button onClick={() => handleEdit(item)} className={styles.editButton}>
+  Edit
+</button>
         </span>
       </div>
       <hr className={styles.line} />
