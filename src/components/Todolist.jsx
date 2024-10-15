@@ -1,15 +1,15 @@
-import Todoapplist from "./TodoItem";
-import styles from "./todolist.module.css";
-export default function Todolist({ todos, setTodos }) {
+import React from "react";
+import TodoItem from "./TodoItem";
+
+export default function Todolist({ todos, setTodos, setTodo }) {
+  function handleEdit(item) {
+    setTodo({ name: item.name, done: item.done, date: item.date, time: item.time });
+  }
+
   return (
-    <div className={styles.list}>
-      {todos.map((item) => (
-        <Todoapplist
-          key={item.name}
-          item={item}
-          todos={todos}
-          setTodos={setTodos}
-        />
+    <div>
+      {todos.map((item, index) => (
+        <TodoItem key={index} item={item} todos={todos} setTodos={setTodos} handleEdit={handleEdit} />
       ))}
     </div>
   );
