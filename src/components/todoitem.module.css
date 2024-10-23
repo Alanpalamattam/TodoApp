@@ -1,31 +1,45 @@
 .item {
-  width: 500px;
+  width: 100%; /* Full width */
   color: #353935;
-  font-size: 20px;
-  margin: 0 auto;
+  font-size: 18px; /* Slightly smaller font */
+  margin: 10px 0; /* Space between items */
+  padding: 10px; /* Add padding */
+  border: 1px solid #ddd; /* Add border */
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+.item:hover {
+  background-color: #f9f9f9; /* Light gray on hover */
 }
 .itemName {
   font-weight: bold;
-  padding: 20px;
 }
 .line {
-  border: 1px solid;
+  border: 1px solid #ccc; /* Lighter line */
 }
 .deletebutton {
   float: right;
-  padding: 12px 20px;
+  padding: 10px 15px;
   border: none;
-  background-color: #f7ca18;
+  background-color: #f44336; /* Red for delete */
   color: white;
-  margin-top: -5px;
-  cursor: pointer;
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition */
 }
-.button {
+.deletebutton:hover {
+  background-color: #d32f2f; /* Darker red on hover */
+}
+.editButton {
   float: right;
-  padding: 12px 20px;
+  padding: 10px 15px;
   border: none;
-  background-color: #f7ca18;
+  background-color: #2196F3; /* Blue for edit */
   color: white;
-  margin-top: -5px;
-  cursor: pointer;
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+.editButton:hover {
+  background-color: #1976D2; /* Darker blue on hover */
 }

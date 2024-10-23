@@ -3,19 +3,22 @@
   border-radius: 8px;
   padding: 20px;
   width: 500px;
-  margin: 0 auto;
-  margin-top: 50px;
-  box-shadow: -4px 6px rgb(0, 0, 0, 0.1);
+  margin: 20px auto; /* Center the form */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 .modernInput {
   display: block;
   width: 100%;
-  border: none;
+  border: 1px solid #ccc; /* Add border */
+  border-radius: 4px; /* Rounded corners */
+  padding: 10px; /* Add padding */
   color: rgb(34, 27, 27);
   font-size: 16px;
+  margin-bottom: 10px; /* Space between inputs */
 }
 .modernInput:focus {
   outline: none;
+  border-color: #4CAF50; /* Change border color on focus */
 }
 .modernButton {
   display: inline-block;
@@ -24,7 +27,13 @@
   background-color: #4CAF50;
   padding: 12px 20px;
   color: white;
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition */
+}
+.modernButton:hover {
+  background-color: #45a049; /* Darker green on hover */
 }
 .inputContainer {
   display: flex;
+  flex-direction: column; /* Stack inputs vertically */
 }
