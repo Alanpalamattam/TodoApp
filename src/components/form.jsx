@@ -2,13 +2,13 @@ import { useState } from "react";
 import styles from "./form.module.css";
 
 export default function Form({ todos, setTodos }) {
-  const [todo, setTodo] = useState({ name: "", done: false, date: "", time: "", priority: "Medium", tags: "" });
+  const [todo, setTodo] = useState({ name: "", done: false, date: "", time: "", priority: "Medium", tags: "", reminder: "" });
 
   function handleSubmit(e) {
     e.preventDefault();
     const tagsArray = todo.tags.split(',').map(tag => tag.trim()); // Split tags by comma
     setTodos([...todos, { ...todo, tags: tagsArray }]); // Add tags to todo
-    setTodo({ name: "", done: false, date: "", time: "", priority: "Medium", tags: "" }); // Reset all fields
+    setTodo({ name: "", done: false, date: "", time: "", priority: "Medium", tags: "", reminder: "" }); // Reset all fields
     console.log(todos);
   }
 
@@ -33,6 +33,13 @@ export default function Form({ todos, setTodos }) {
           onChange={(e) => setTodo({ ...todo, time: e.target.value })}
           type="time"
           value={todo.time}
+        />
+        <input
+          className={styles.modernInput}
+          onChange={(e) => setTodo({ ...todo, reminder: e.target.value })}
+          type="datetime-local"
+          value={todo.reminder}
+          placeholder="Set reminder"
         />
         <select
           className={styles.modernInput}

@@ -22,6 +22,7 @@ export default function TodoItem({ item, todos, setTodos, handleEdit }) {
       <div className={styles.itemName}>
         {item.name} - {item.date} {item.time} - {item.priority} {/* Display priority */}
         <div>Tags: {item.tags.join(', ')}</div> {/* Display tags */}
+        {item.reminder && <div>Reminder: {new Date(item.reminder).toLocaleString()}</div>} {/* Display reminder */}
         <span>
           <button onClick={() => handleEdit(item)} className={styles.editButton}>
             Edit
